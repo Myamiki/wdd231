@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD231 Course Home Page">
+    <meta name="author" content="Prayer Marangwanda">
+    <title>WDD231 - Course Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script defer="defer" src="scripts/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="homie">
+    <img src="images/profile.jpg" alt="My Profile" width="70" loading="lazy">
+    <h1>Prayer Marangwanda</h1>
+     </div>
+     <nav id="nav-links" class="hidden">
+        <a href="">Home</a>
+        <a href="">Chamber</a>
+        <a href="">GitHub Profile</a>
+        <a href="">LinkedIn</a>
+    </nav>
+    </div>
+    <div class="hamburguer" id="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+<main>
+    <div class="mains">
+    <section class="block1">
+        <div class="card-header">
+        <h2>Course Work</h2>
+        </div>
+        <br>
+        <br>
+        <div class="card-content">
+        <ul>
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul>
+        </div>
+    </section>
+    <section class="block2">
+        <div class="card-header">
+        <h2>South Africa</h2>
+        </div>
+        <br>
+        <br>
+        <div class="card-content">
+        <figure>
+        <img src="images/flag.jpg" alt="South Africa" width="300" loading="lazy">
+        <figcaption>South African People</figcaption>
+        </figure>
+        </div>
+    </section>
+    <section class="block3">
+        <div class="card-header">
+        <h2>Web and Computer Programming Certificate</h2>
+        <br>
+        </div>
+        <br>
+        <br>
+     <!-- Filter Buttons -->
+     <div class="filter-buttons">
+        <button onclick="toggleAllCourses()"> All Courses</button>
+        <button onclick="filterCourses('CSE')">CSE Courses</button>
+        <button onclick="filterCourses('WDD')"> WDD Courses</button>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <!-- Individual Course Toggle Buttons -->
+    <div id="course-buttons" class="course-buttons"></div>
+
+    <!-- Course Container -->
+    <div id="course-container"></div>
+        </div>
+
+    </section>
+    </div>
+</main>
+<footer>
+    <p>
+       
+        <p class="copyright"> @<span id="currentyear"></span>💕 Prayer Marangwanda💕 South Africa <img src="images/flag2.jpg" alt="South Africa" width="20" loading="lazy"> </p>
+        <p class="lastModified">Last Modification:  <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>
