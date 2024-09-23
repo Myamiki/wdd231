@@ -55,7 +55,7 @@ main , footer{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: rgb(9, 93, 93);
-    box-shadow: 10px 10px 15px 5px var(--dark-color) var(--white-color); 
+    box-shadow: 10px 10px 15px 5px var(--dark-color) ; 
     
     
 }
