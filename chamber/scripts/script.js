@@ -74,6 +74,86 @@ document.addEventListener("DOMContentLoaded", function() {
     fetchDirectory(); // Fetch directory data on page load
 });
 
+const myTown = document.querySelector('#town');
+const myDescription = document.querySelector('#description');
+const myTemperature = document.querySelector('#temperature');
+const myGraphic = document.querySelector('#graphic');
+
+const myKey = "a69f5f881167f04dbc4fdaccfe77e852";
+const myLat = "-25.731340";
+const myLong = "28.218370";
+
+const myUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLong}&appid=${myKey}&units=imperial`;
+
+async function apiFetch() {
+    try {
+        const response = await fetch(myUrl);
+        if (response.ok) {
+            const data = await response.json();
+            displayResults(data); // Now this function will run
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function displayResults(data) {
+    myTown.innerHTML = data.name;
+    myDescription.innerHTML = data.weather[0].description
+    myTemperature.innerHTML = `${data.main.temp}&deg;C`
+    const iconsrc =  `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
+    myGraphic.setAttribute('SRC',iconsrc)
+    myGraphic.setAttribute('alt',data.weather[0].description)
+}
+
+apiFetch();
+
+const companyContainer = document.querySelector('#company-container');
+// Fetch JSON data
+fetch('data/response.json')
+  .then(response => response.json())
+  .then(data => {
+    // Filter for Gold and Silver membership levels
+    const goldSilverMembers = data.filter(member => 
+      member.membership === "Gold" || member.membership === "Silver"
+    );
+
+    // Randomly select 2–3 members
+    const selectedMembers = getRandomMembers(goldSilverMembers, 3);
+
+    // Display selected members in the spotlight section
+    displaySpotlight(selectedMembers);
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
+// Function to get random members
+function getRandomMembers(members, count) {
+  const shuffled = members.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+// Function to display members in the DOM
+function displaySpotlight(members) {
+  members.forEach(member => {
+    const memberDiv = document.createElement('div');
+    memberDiv.classList.add('member');
+
+    memberDiv.innerHTML = `
+      <h3>${member.name}</h3>
+      <img src="${member.image}" alt="${member.name}">
+      <p>${member.description}</p>
+      <p><strong>Membership:</strong> ${member.membership}</p>
+    `;
+
+    companyContainer.appendChild(memberDiv);
+  });
+
+}
+
+
+
 // Update current year and last modified date
 const date = new Date();
 document.getElementById("currentyear").textContent = date.getFullYear();
