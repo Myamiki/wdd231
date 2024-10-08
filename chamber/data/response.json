@@ -1,0 +1,33 @@
+
+[
+  {
+      "name": "Olbor Tech",
+      "membership": "Gold",
+      "description": "Leading provider of innovative tech solutions.",
+      "image": "images/members.jpg"
+  },
+  {
+      "name": "Zezea Corp",
+      "membership": "Silver",
+      "description": "Focused on sustainable development and eco-friendly products.",
+      "image":"images/member.jpg"
+  },
+  {
+      "name": "Ponif Innovations",
+      "membership": "Gold",
+      "description": "Specialized in AI-driven applications for modern industries.",
+      "image": "images/memberss.jpg"
+  },
+  {
+      "name": "Jomfy Solutions",
+      "membership": "Bronze",
+      "description": "Providing next-generation cybersecurity tools.",
+      "image": "images/member.jpg"
+  },
+  {
+      "name": "Rujol Enterprises",
+      "membership": "Silver",
+      "description": "Offering comprehensive cloud services worldwide.",
+      "image": "images/members.jpg"
+  }
+]  
