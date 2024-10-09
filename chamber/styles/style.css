@@ -104,7 +104,7 @@ header {
 }
 
 /* Button menu styling */
-.menus {
+.menu {
     display: flex; /* Use flexbox for layout */
     justify-content: center; /* Center buttons */
     gap: 20px; /* Space between buttons */
@@ -112,7 +112,7 @@ header {
 }
 
 /* Button styling */
-.menus button {
+.menu button {
     background-color: var(--dark-color); /* Button background color */
     color: var(--white-color); /* Button text color */
     border: none; /* Remove default border */
@@ -444,7 +444,7 @@ footer {
      .main-container,
       .events,
        .event-box,
-        .mains {
+        .mains{
         display: grid;
         grid-template-columns: 1fr; /* Single column layout */
         margin: 0;
@@ -460,6 +460,5 @@ footer {
         text-align: left;
     }
     }
-
 
 
