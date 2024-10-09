@@ -140,6 +140,15 @@ header.dark-mode, footer.dark-mode {
     background-color: var(--grey-color); /* Set background color for dark mode */
 }
 
+.fa-beat, .fa-bounce, .fa-beat-fade, .fa-fade, .fa-flip, .fa-shake, .fa-spin {
+    animation-delay: 0s !important; /* Providing fallback for animation delay */
+}
+
+.fa-rotate-by {
+    transform: rotate(0deg) !important; /* Fallback for rotation */
+}
+
+
 /* Logo and Title alignment */
 .logo-title {
     display: flex; /* Use flexbox for layout */
