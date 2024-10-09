@@ -319,7 +319,7 @@ section a:hover {
     margin: 20px 0; /* Add margin around the container */
 }
 .events,
- .main {
+ .mains {
     flex: 1; /* Allow both sections to take equal space */
     min-width: 300px; /* Ensure a minimum width for both sections */
     max-width: 45%; /* Set a max width to keep them balanced */
@@ -357,7 +357,7 @@ section a:hover {
     margin-bottom: 20px;
 }
 
-.main {
+.mains {
     background-color: var(--white-color);
     padding: 30px 10px;
     text-align: center;
@@ -444,7 +444,7 @@ footer {
      .main-container,
       .events,
        .event-box,
-        .main{
+        .mains {
         display: grid;
         grid-template-columns: 1fr; /* Single column layout */
         margin: 0;
