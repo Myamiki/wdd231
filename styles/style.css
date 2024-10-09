@@ -1,234 +1,464 @@
-:root{
-    --background-small:rgb(3, 50, 50);
-    --white-color:#ffffff;
+:root {
+    /* Color variables for consistent theming */
+    --background-small: rgb(15, 83, 83);
+    --white-color: #ffffff;
     --label-color: #050540;
-    --bright-color:rgb(230, 230, 238);
-    --background-color:rgb(29, 178, 178);
-    --dark-color:black;
-    --extra-color:  aqua ;
-
+    --bright-color: rgb(230, 230, 238);
+    --background-color: rgb(29, 178, 178);
+    --dark-color: black;
+    --extra-color: aqua;
+    --red-color: #d66060;
+    --grey-color: rgb(49, 47, 47);
 }
 
-*{
-   box-sizing: border-box; 
-   margin: 0;
-   padding: 0;
-   max-width: 1200px;
+/* Reset default margins and paddings for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-header{
-    padding: 25px;
-    color: var(--bright-color);
-    
+/* Styling for the header block */
+header {
+    background-color: var(--background-small); /* Set header background color */
+    padding: 2rem; /* Add padding inside header */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
 }
 
-body{
-    font-family: 'Roboto','jost', sans-serif;
+/* Container for logo/title and nav links */
+.header-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Full width of the parent */
 }
 
-main , footer{
-    margin: 20px 20px;
-}
-    
-
-.hamburguer{
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    flex-direction: column;
-    cursor: pointer;
-}
-.hamburguer span{
-    width: 25px;
-    height: 3px;
-    background-color: var(--white-color);
-    margin: 5px 0;
+/* Hamburger menu hidden by default on large screens */
+.hamburger {
+    display: none; /* Hide on large screens */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: 0.4s ease-in-out; /* Smooth transition effect */
+    z-index: 2; /* Ensure it is on top */
 }
 
-
-
-.homie{
-    padding: 10px;
-    gap: 30px;
-    display: flex;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: rgb(9, 93, 93);
-    box-shadow: 10px 10px 15px 5px var(--dark-color) ; 
-    
-    
+/* Hamburger bar styling */
+.bar {
+    width: 25px; /* Set bar width */
+    height: 3px; /* Set bar height */
+    background-color: var(--white-color); /* Bar color */
+    margin: 5px 0; /* Space between bars */
+    transition: 0.4s ease-in-out; /* Smooth transition effect */
 }
-       
 
-nav{
-    background-color: rgb(3, 35, 35);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-    }
+/* Transform hamburger to X when active */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Rotate first bar */
+}
 
-nav a{
-    display: block;
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0; /* Hide second bar */
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotate third bar */
+}
+
+/* Menu styling */
+.menu {
+    display: flex; /* Use flexbox for layout */
+    position: relative; /* Position relative to parent */
+    z-index: 2; /* Ensure it is on top */
+}
+
+/* Show menu when active */
+.menu.active {
+    display: block; /* Change display to block when active */
+}
+
+/* Menu items list */
+.menu ul {
+    display: flex; /* Use flexbox for layout */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* List item styling */
+.menu ul li {
+    margin-left: 20px; /* Space between list items */
+}
+
+/* Link styling */
+.menu ul li a {
+    text-decoration: none; /* Remove underline */
+    color: var(--white-color); /* Set text color */
+    font-size: 1.1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+
+/* Link hover effect */
+.menu ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Button menu styling */
+.menu {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center buttons */
+    gap: 20px; /* Space between buttons */
+    margin: 10px 0; /* Margin around the menu */
+}
+
+/* Button styling */
+.menu button {
+    background-color: var(--dark-color); /* Button background color */
+    color: var(--white-color); /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding inside buttons */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Button hover effect */
+.menus button:hover {
+    background-color: var(--extra-color); /* Change background on hover */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: var(--grey-color); /* Set background color for dark mode */
+    color: var(--white-color); /* Set text color for dark mode */
+}
+
+/* Dark mode styles for header and footer */
+header.dark-mode, footer.dark-mode {
+    background-color: var(--grey-color); /* Set background color for dark mode */
+}
+
+/* Logo and Title alignment */
+.logo-title {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    float: left; /* Align to the left */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/hero.jpg'); /* Set background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    align-items: center; /* Center items vertically */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    color: var(--white-color); /* Text color */
+    text-align: center; /* Center text */
+    position: relative; /* Make hero image positioned */
+    z-index: 1; /* Ensure hero is behind the menu */
+}
+
+/* Hero overlay */
+.hero::before {
+    content: ""; /* Empty content for overlay */
+    position: absolute; /* Position overlay absolutely */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure hero is behind the menu */
+}
+
+
+/* Hero text styling */
+.hero-content {
+    width: 40%;
     color: var(--white-color);
+    background-color: rgba(0, 0, 255, 0.4); /* Blue background overlay */
+    position: relative; /* Position relative to parent */
+    z-index: 1; /* Ensure text is above overlay */
+    font-weight: bolder; /* Bold text */
+    padding: 20px 20px;
+}
+
+/* Body styling */
+body {
+    font-family: 'Roboto', 'Jost', sans-serif; /* Set font family */
+    background-color: var(--white-color); /* Set background color */
+}
+
+/* Main content styling */
+main {
+    padding: 1rem; /* Padding inside main */
+    margin: 0 auto; /* Center main content */
+}
+
+.card {
+    border: 1px solid var(--dark-color);
+    background-color: var(--red-color);
+    border-radius: 10px;
     text-align: center;
-    padding: 1em;
-    text-decoration: none;
-    }
-    
-    nav a:hover{
-    border: 10px solid var(--extra-color);
-    }
-
-.mains{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
 }
 
-.card-content {
-    padding-left: 35px;
-    padding-right: 35px;
-    
+.card h2 {
+    color: var(--dark-color);
+    margin: .3rem 0;
 }
 
-
-.block1,.block2,.block3{
-    background-color:var(--background-color);
-    text-align: center;
-    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5); 
-}
-      
-
-.block3 {
-    grid-column: 1/3;
-
+.card #description {
+    text-transform: capitalize;
+    color: var(--dark-color);
+    margin: .3rem 0;
 }
 
-.card-header{
-    color:var(--white-color);
-    text-align: center;
-    padding: 5px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: var(--background-small);
-    }  
-    
-    .course {
-        border: 1px solid var(--dark-color);
-        padding: 2px;
-        margin: 1px;
-        background-color: var(--white-color);
-        display: none; /* Hide all courses initially */
-    }
-    .completed {
-        background-color: var(--label-color);
-        border-color: var(--dark-color);
-    }
-    
-    .filter-buttons, .course-buttons {
-        margin: 1px;
-    }
-    .filter-buttons button, .course-buttons button {
-        padding: 2px;
-        cursor: pointer;
-        background-color: var(--label-color);
-        color: var(--white-color);
-        font-size: small;
-        border: 1px solid var(--dark-color);
-        text-align: center;
-    }
+.card #temparature {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin: .3rem 0;
+}
+/* Article styling for grid layout */
+article {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+    grid-gap: 60px; /* Space between grid items */
+}
 
-    .course-buttons button, .course-buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        padding: 2px 2px ;
-        gap: 10px;
-        
-    }
+/* Section styling inside articles */
+article.grid section {
+    text-align: center; /* Center text */
+    object-fit: cover; /* Maintain aspect ratio */
+    box-shadow: 0 0 10px 5px var(--dark-color); /* Shadow effect */
+}
 
-     .course-buttons button:hover {
-        border: 10px solid var(--white-color) ;
-    }
+/* Image styling inside article sections */
+article.grid section img {
+    max-width: 100%; /* Limit max width */
+    border-radius: 10px; /* Rounded corners */
+}
 
-    .filter-buttons button:hover{
-        border: 5px solid var(--white-color);
-    }
+/* List article styling */
+article.list {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+}
 
-footer{
-    color: var(--white-color);
-    background-color: var(--background-small);
+/* Section styling for list articles */
+article.list section {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space out items */
+    padding: 10px; /* Padding inside sections */
+    border-bottom: 3px solid var(--dark-color); /* Bottom border */
+}
+
+/* Image styling in list article sections */
+article.list section img {
+    width: 100px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space to the right */
+}
+
+/* Title styling in list sections */
+article.list section h3 {
+    flex-grow: 1; /* Allow title to grow and take space */
+}
+
+/* Link styling */
+section a {
+    color: var(--red-color); /* Set link color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Link hover effect */
+section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.sections {
     padding: 20px;
     text-align: center;
-    box-shadow: 10px 10px 15px 5px var(--dark-color); 
-}
+    background-color: var(--extra-color);
+  }
 
-
-
-@media(max-width:768px){
-
-.mains{
-    display: flex;            
-    flex-direction: column;      
-    justify-content: center;  
-    gap: 1rem;               
-}
+  .section h2 {
+    color: var(--grey-color);
     
-
-.hamburguer{
-    display: flex;
-}
-
-nav{
-    display: none;
-}
-
-
-.filter-buttons{
-    display: flex;            
-    flex-direction: column;      
-    justify-content: center;
-    gap: 10px;
-
-}
-
-
-#nav-links {
-    display: none;
-    flex-direction: column;
-    background-color:var(--bright-color);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 150px;
-    padding: 10px;
-}
-
-/* Show navigation when active */
-#nav-links.active {
-    display: flex;
-}
-
-#nav-links a {
-    color:var(--dark-color);
+  }
+  
+  /* Call to Action Button Styling */
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: var(--red-color);
+    color: var(--white-color);
     text-decoration: none;
-    padding: 10px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--white-color);
+  }
+  
+  /* Flex styles for events and main section */
+
+.main-container {
+    display: flex; /* Use flexbox to align side by side */
+    justify-content: space-between; /* Space them evenly */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Add space between the two sections */
+    margin: 20px 0; /* Add margin around the container */
+}
+.events,
+ .weathers {
+    flex: 1; /* Allow both sections to take equal space */
+    min-width: 300px; /* Ensure a minimum width for both sections */
+    max-width: 45%; /* Set a max width to keep them balanced */
+    padding: 20px; /* Padding inside each section */
+    background-color: var(--white-color); /* Background color for readability */
+    border: 1px solid var(--white-color); /* Add a subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(37, 36, 36, 0.5); /* Add some shadow for depth */
 }
 
-#nav-links a:hover {
-    background-color: #555;
+
+
+.event-box {
+    background-color:rgba(0, 0, 255, 0.4); /* Blue background overlay *; /* Default background color */
+    border: 1px solid var(--white-color); /* Border color */
+    padding: 30px;
+    margin: 20px;
+    flex: 1; /* Each box takes equal space */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    color: var(--dark-color); /* Text color for better contrast */
 }
-.course-buttons button, .course-buttons {
-    display: flex;            
-    flex-direction: column;      
-    justify-content: center;
+ 
+
+ #spotlight {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
 }
+
+.hero h2,
+ .events h2,
+  #spotlight h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
+
+.weathers {
+    background-color: var(--white-color);
+    padding: 30px 10px;
+    text-align: center;
+  
+}
+
+#company-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
+
+  
+  .member {
+    background-color: var(--white-color);
+    border: 1px solid var(--white-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 15px;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .member img {
+    max-width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .member h3 {
+    color: var(--dark-color);
+  }
+  
+  .member p {
+    color: var(--dark-color);
+  }
+/* Footer styling */
+footer {
+    color: var(--white-color); /* Text color */
+    background-color: var(--background-small); /* Background color */
+    padding: 20px; /* Padding inside footer */
+    text-align: center; /* Center text */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hamburger {
+        display: inline-block; /* Show hamburger on mobile */
+    }
+
+    .menu {
+        display: none; /* Hide menu items on mobile by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Position menu absolutely */
+        top: 70px; /* Position below header */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        background-color: var(--grey-color); /* Menu background */
+    }
+
+    .menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .menu ul {
+        display: grid; /* Grid layout for menu links on mobile */
+        grid-template-columns: 1fr; /* 1-column grid */
+        gap: 10px;
+    }
+
+    .menu ul li {
+        padding: 10px;
+    }
+
+    /* article for mobile to display as a single column */
+    article {
+        display: grid; /* Use grid layout */
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-gap: 20px; /* Space between grid items */
+    }
+
+     .main-container,
+      .events,
+       .event-box,
+        .weathers {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        margin: 0;
+    }
+
+    #company-container{
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        margin: 0;
+    }
+
+    #spotlight h2{
+        text-align: left;
+    }
+    }
+
 
