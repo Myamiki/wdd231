@@ -110,49 +110,46 @@ function displayResults(data) {
 
 apiFetch();
 
-const companyContainer = document.querySelector('#company-container');
-// Fetch JSON data
-fetch('data/response.json')
-  .then(response => response.json())
-  .then(data => {
-    // Filter for Gold and Silver membership levels
-    const goldSilverMembers = data.filter(member => 
-      member.membership === "Gold" || member.membership === "Silver"
-    );
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('data/response.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('company-container');
+            
+            // Filtered companies on membership level (Gold or Silver)
+            const eligibleCompanies = data.filter(company => company.membership === 'Gold' || company.membership === 'Silver');
+            
+            // Function to shuffle the array and select 2-3 random companies
+            const getRandomCompanies = (companies, num) => {
+                const shuffled = companies.sort(() => 0.5 - Math.random());
+                return shuffled.slice(0, num);  // Select 2 or 3 companies
+            };
 
-    // Randomly select 2–3 members
-    const selectedMembers = getRandomMembers(goldSilverMembers, 3);
+            // Get 2 or 3 random companies
+            const randomCompanies = getRandomCompanies(eligibleCompanies, Math.floor(Math.random() * 2) + 2);
 
-    // Display selected members in the spotlight section
-    displaySpotlight(selectedMembers);
-  })
-  .catch(error => console.error('Error fetching data:', error));
+            randomCompanies.forEach(company => {
+                //card for each company
+                const companyCard = document.createElement('div');
+                companyCard.classList.add('member');
 
-// Function to get random members
-function getRandomMembers(members, count) {
-  const shuffled = members.sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count);
-}
-
-// Function to display members in the DOM
-function displaySpotlight(members) {
-  members.forEach(member => {
-    const memberDiv = document.createElement('div');
-    memberDiv.classList.add('member');
-
-    memberDiv.innerHTML = `
-      <h3>${member.name}</h3>
-      <img src="${member.image}" alt="${member.name}">
-      <p>${member.description}</p>
-      <p><strong>Membership:</strong> ${member.membership}</p>
-    `;
-
-    companyContainer.appendChild(memberDiv);
-  });
-
-}
-
-
+                // Populate the card with company details
+                companyCard.innerHTML = `
+                <h3>${company.name}</h3>
+                <p><strong>Membership:</strong> ${company.membership}</p>
+                    <img src="${company.image}" alt="${company.name} logo">
+                    <p>${company.description}</p>
+                    <p><strong>Email:</strong> <a href="mailto:${company.EMAIL}">${company.EMAIL}</a></p>
+                    <p><strong>Phone:</strong> <a href="tel:${company.PHONE}">${company.PHONE}</a></p>
+                    <a href="${company.URL}" target="_blank" class="cta-button">Visit Website</a>
+                `;
+                
+                // Append the card to the container
+                container.appendChild(companyCard);
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
 
 // Update current year and last modified date
 const date = new Date();
