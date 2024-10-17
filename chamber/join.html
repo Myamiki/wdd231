@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD231-Chamber of Commerce course project">
+    <meta name="author" content="Prayer Marangwanda">
+    <meta property="og:title" content="Chamber of Commerce - My Local Business Network"/>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.pexels.com/photo/people-in-couch-1024248/"/>
+    <meta property="og:url" content="https://myamiki.github.io/wdd231/chamber/index.html"/>
+    <meta property="og:description" content="Join the Chamber of Commerce to connect with local businesses, resources, and opportunities."/>
+    <meta name="twitter:card" content="https://www.pexels.com/photo/people-in-couch-1024248/"/>
+    <meta name="twitter:title" content="Chamber of Commerce -My Local Business Network"/>
+    <meta name="twitter:description" content="Join the Chamber of Commerce to connect with local businesses, resources, and opportunities."/>
+    <meta name="twitter:image" content="https://www.pexels.com/photo/people-in-couch-1024248/"/>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <script defer="defer" src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="icon" href="https://img.icons8.com/?size=100&id=qEwDbmXzlQrx&format=png">
+<title>Chamber of Commerce Join Page</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-title">
+                <!-- Favicon-->
+                <img src="https://img.icons8.com/?size=100&id=qEwDbmXzlQrx&format=png&color=000000" alt="favicon" width="32">
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav id="menu" class="menu">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><i class="fa-solid fa-circle-half-stroke"></i></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+     <!-- Hero Section -->
+     <section class="hero">
+        <div class="hero-content">
+          <h2>Join Us Today!</h2>
+          <p>Experience our services and be a part of the community.</p>
+          <!-- Call to Action button -->
+          <a href="join.html" class="cta-button">Get Started Now</a>
+        </div>
+    </section>
 
+    <main id="coners">
+        
+        <section class="forms">
+            <h1>Membership Application Form</h1>
+
+            <form method="GET" action="thanks.html" class="designOne">
+              <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
+                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
+                <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="067-588-1760" ></label>
+                <label>Email <input type="email" name="email" required placeholder="sara04@gmail.com"  title="Your Email" autocomplete="email"></label>
+                <label for="business-name">Business/Organization's Name:</label>
+                <input type="text" id="business-name" name="business" required title="Your Business Name" autocomplete="organization" placeholder="Telbo Services">
+                 
+                 <h3>Description</h3>
+                <label for="description">What do you do?</label>
+                <textarea id="description" name="description" rows="5" cols="50" title="Describe your business" placeholder="Describe your work..."></textarea>
+    
+
+                <h3>Membership level</h3>
+                <label><input type="radio" name="membership" value="NonProfit" checked>Non Profit Organization</label>
+                <label><input type="radio" name="membership" value="Bronze">Bronze Membership</label>
+                <label><input type="radio" name="membership" value="Silver">Silver Membership</label>
+                <label><input type="radio" name="membership" value="Gold">Gold Membership</label>
+                 
+                
+                <h3>Date and Location</h3>
+                <label>Date <input type="date" name="fecha" required></label>
+               
+                <label>Location
+                  <select name="location" required>
+                    <option value="South-Africa">South Africa</option>
+                    <option value="zambia">Zambia</option>
+                    <option value="South">South Africa</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </label>
+        
+                <input type="submit" value="Schedule An Appointment">
+            </form>
+        
+            
+        </section>
+
+        <section class="memberships">
+            <h1>Members level</h1>
+            <section class="openButton1a">
+                <h2>Non Profit Organization</h2>
+            <button id="openButton1">learn more</button>
+            </section>
+            <section class="openButton2b">
+                <h2>Bronze Membership</h2>
+            <button id="openButton2">learn more</button>
+            </section>
+            <section class="openButton3c">
+                <h2>Silver Membership</h2>
+            <button id="openButton3">learn more</button>
+            </section>
+            <section class="openButton4d">
+                <h2>Gold Membership</h2>
+            <button id="openButton4">learn more</button>
+            </section>
+            <dialog id="dialogBox">
+               <div></div>
+                <button id="closeButton">Close</button>
+            </dialog>
+            </section>
+
+    </main>
+
+    <footer>
+        <p class="copyright"> @<span id="currentyear"></span>💕 Prayer Marangwanda💕 South Africa <img src="images/flag2.jpg" alt="South Africa" width="20" loading="lazy"> </p>
+        <p class="lastModified">Last Modification:  <span id="lastModified"></span></p>
+
+    </footer>
+    
+</body>
+</html
