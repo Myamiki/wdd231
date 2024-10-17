@@ -61,47 +61,35 @@
         <section class="forms">
             <h1>Membership Application Form</h1>
 
-            <form method="GET" action="thankyou.html" class="designOne">
-    
-                <!-- First Name -->
+            <form action="thankyou.html" method="GET">
                 <label for="first">First Name</label>
                 <input type="text" name="first" id="first" required autocomplete="given-name" title="Your First Name">
                 
-                <!-- Last Name -->
                 <label for="last">Last Name</label>
                 <input type="text" name="last" id="last" required autocomplete="family-name" title="Your Last Name">
                 
-                <!-- Cell Phone -->
                 <label for="phone">Cell Phone</label>
                 <input type="tel" name="phone" id="phone" autocomplete="tel" title="A Phone Number with dashes" placeholder="067-588-1760">
                 
-                <!-- Email -->
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required placeholder="sara04@gmail.com" title="Your Email" autocomplete="email">
                 
-                <!-- Business Name -->
                 <label for="business-name">Business/Organization's Name</label>
                 <input type="text" id="business-name" name="business" required title="Your Business Name" autocomplete="organization" placeholder="Telbo Services">
                 
-                <!-- Membership Level -->
                 <h3>Membership level</h3>
                 <label><input type="radio" name="membership" value="NonProfit" checked> Non Profit Organization</label>
                 <label><input type="radio" name="membership" value="Bronze">Bronze Membership</label>
                 <label><input type="radio" name="membership" value="Silver">Silver Membership</label>
                 <label><input type="radio" name="membership" value="Gold">Gold Membership</label>
                 
-                <!-- Date and Location -->
                 <h3>Date and Location</h3>
-                
-                <!-- Date -->
                 <label for="fecha">Date</label>
                 <input type="date" name="fecha" id="fecha" required>
                 
-                <!-- Description -->
                 <label for="description">What do you do?</label>
                 <textarea id="description" name="description" rows="5" cols="50" title="Describe your business" placeholder="Describe your work..."></textarea>
                 
-                <!-- Location -->
                 <label for="location">Location</label>
                 <select name="location" id="location" required>
                     <option value="" disabled selected>Select your location</option>
@@ -111,10 +99,12 @@
                     <option value="zimbabwe">Zimbabwe</option>
                 </select>
                 
-                <!-- Submit Button (Not wrapped in label) -->
+                <!-- Submit Button -->
                 <input type="submit" value="Schedule An Appointment">
             </form>
             
+            <div id="results"></div>
+              
             
         </section>
 
