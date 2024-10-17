@@ -16,7 +16,7 @@
     <meta name="twitter:image" content="https://www.pexels.com/photo/people-in-couch-1024248/"/>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/normalize.css">
-    <script defer="defer" src="scripts/script.js"></script>
+    <script defer="defer" src="js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
@@ -62,40 +62,59 @@
             <h1>Membership Application Form</h1>
 
             <form method="GET" action="thanks.html" class="designOne">
-              <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
-                <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-                <label>Cell Phone <input type="tel" name="phone"  autocomplete="tel" title="A Phone Number with dashes" placeholder="067-588-1760" ></label>
-                <label>Email <input type="email" name="email" required placeholder="sara04@gmail.com"  title="Your Email" autocomplete="email"></label>
-                <label for="business-name">Business/Organization's Name:</label>
-                <input type="text" id="business-name" name="business" required title="Your Business Name" autocomplete="organization" placeholder="Telbo Services">
-                 
-                 <h3>Description</h3>
-                <label for="description">What do you do?</label>
-                <textarea id="description" name="description" rows="5" cols="50" title="Describe your business" placeholder="Describe your work..."></textarea>
     
-
+                <!-- First Name -->
+                <label for="first">First Name</label>
+                <input type="text" name="first" id="first" required autocomplete="given-name" title="Your First Name">
+                
+                <!-- Last Name -->
+                <label for="last">Last Name</label>
+                <input type="text" name="last" id="last" required autocomplete="family-name" title="Your Last Name">
+                
+                <!-- Cell Phone -->
+                <label for="phone">Cell Phone</label>
+                <input type="tel" name="phone" id="phone" autocomplete="tel" title="A Phone Number with dashes" placeholder="067-588-1760">
+                
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="sara04@gmail.com" title="Your Email" autocomplete="email">
+                
+                <!-- Business Name -->
+                <label for="business-name">Business/Organization's Name</label>
+                <input type="text" id="business-name" name="business" required title="Your Business Name" autocomplete="organization" placeholder="Telbo Services">
+                
+                <!-- Membership Level -->
                 <h3>Membership level</h3>
-                <label><input type="radio" name="membership" value="NonProfit" checked>Non Profit Organization</label>
+                <label><input type="radio" name="membership" value="NonProfit" checked> Non Profit Organization</label>
                 <label><input type="radio" name="membership" value="Bronze">Bronze Membership</label>
                 <label><input type="radio" name="membership" value="Silver">Silver Membership</label>
                 <label><input type="radio" name="membership" value="Gold">Gold Membership</label>
-                 
                 
+                <!-- Date and Location -->
                 <h3>Date and Location</h3>
-                <label>Date <input type="date" name="fecha" required></label>
-               
-                <label>Location
-                  <select name="location" required>
-                    <option value="South-Africa">South Africa</option>
+                
+                <!-- Date -->
+                <label for="fecha">Date</label>
+                <input type="date" name="fecha" id="fecha" required>
+                
+                <!-- Description -->
+                <label for="description">What do you do?</label>
+                <textarea id="description" name="description" rows="5" cols="50" title="Describe your business" placeholder="Describe your work..."></textarea>
+                
+                <!-- Location -->
+                <label for="location">Location</label>
+                <select name="location" id="location" required>
+                    <option value="" disabled selected>Select your location</option>
                     <option value="zambia">Zambia</option>
-                    <option value="South">South Africa</option>
+                    <option value="South-Africa">South Africa</option>
                     <option value="Botswana">Botswana</option>
-                    <option value="Zimbabwe">Zimbabwe</option>
-                </label>
-        
+                    <option value="zimbabwe">Zimbabwe</option>
+                </select>
+                
+                <!-- Submit Button (Not wrapped in label) -->
                 <input type="submit" value="Schedule An Appointment">
             </form>
-        
+            
             
         </section>
 
