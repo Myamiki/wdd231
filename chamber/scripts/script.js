@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.querySelector(".fa-circle-half-stroke"); // Theme toggle button
     const hamburger = document.getElementById('hamburger'); // Hamburger menu button
@@ -149,6 +150,86 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
         .catch(error => console.error('Error fetching data:', error));
+});
+
+const openButton = document.querySelector("#openButton");
+const dialogBox = document.querySelector("#dialogBox"); 
+const closeButton = document.querySelector("#closeButton"); 
+const dialogBoxText = document.querySelector("#dialogBox div"); 
+
+
+//show the dialog button opens the dialog modally
+
+openButton1.addEventListener("click", () => {
+    dialogBox.showModal();
+    dialogBoxText.innerHTML = `
+    <p><strong>Cost:</strong>Free</p>
+      <p><strong>Non Profit Organization Membership Benefits:</strong></p>
+    <ul>
+        <li><strong>Access to General Chamber Events:</strong> Invitation to standard events like monthly mixers, seminars, and community gatherings.</li>
+        <li><strong>Basic Directory Listing:</strong> Your business is listed in the Chamber's online and printed directory with contact details.</li>
+        <li><strong>Networking Opportunities:</strong> Connect with other business owners and community leaders.</li>
+        <li><strong>Business Newsletter:</strong> Subscription to the Chamber’s newsletter with community news and business updates.</li>
+        <li><strong>Use of Chamber Logo:</strong> Permission to use the Chamber’s logo on your website and promotional materials, showing your membership and credibility.</li>
+    </ul>`
+    ;
+});
+
+
+openButton2.addEventListener("click", () => {
+    dialogBox.showModal();
+    dialogBoxText.innerHTML = `
+      
+    <p><strong>Cost:</strong> R1000/year</p>
+      <p><strong>Bronze Membership Benefits:</strong></p>
+    <ul>
+        <li><strong>All Non Profit Organization Membership Benefits.</strong></li>
+        <li><strong>Discounts on Event Tickets:</strong> Receive 10-20% discounts on tickets for major Chamber events, such as conferences, expos, and workshops.</li>
+        <li><strong>Special Member-Only Events:</strong> Invitations to exclusive networking events designed for Silver members and above, where you can meet influential community members.</li>
+        <li><strong>Enhanced Directory Listing:</strong> Your listing in the directory includes a business description, links to your social media accounts, and website.</li>
+        <li><strong>Training and Workshops:</strong> Access to business skill workshops and webinars at discounted rates to help you grow your business.</li>
+        <li><strong>Certificate of Membership:</strong> A physical certificate to display at your place of business, recognizing your support of the Chamber.</li>
+    </ul>`
+    ;
+});
+
+
+//show the dialog button opens the dialog modally
+openButton3.addEventListener("click", () => {
+    dialogBox.showModal();
+    dialogBoxText.innerHTML = `
+    <p><strong>Cost:</strong> R2000/year</p>
+    <p><strong>Silver Membership Benefits:</strong></p>
+    <ul>
+        <li><strong>All Bronze Membership Benefits.</strong></li>
+        <li><strong>Spotlight Advertising on Chamber Homepage:</strong> Featured placement of your business on the Chamber’s homepage in the "Business Spotlight" section, allowing for greater visibility.</li>
+        <li><strong>Priority Placement in Chamber Newsletters:</strong> Your business will be mentioned or featured in Chamber newsletters, which are sent to all members and community partners.</li>
+        <li><strong>Extended Event Discounts:</strong> Get 25-30% discounts on major Chamber events and training sessions.</li>
+        <li><strong>Dedicated Social Media Mentions:</strong> The Chamber will feature your business in posts across its social media channels, increasing your exposure to the community.</li>
+        <li><strong>Free Admission to Select Events:</strong> Complimentary tickets to a few of the Chamber’s premier events, such as the annual business gala or awards banquet.</li>
+        <li><strong>Ribbon Cutting Ceremony:</strong> For new or expanding businesses, the Chamber will host a ribbon-cutting ceremony to celebrate your growth, including press coverage and photos for your promotional use.</li>
+    </ul>`
+    ;
+});
+
+
+//show the dialog button opens the dialog modally
+openButton4.addEventListener("click", () => {
+    dialogBox.showModal();
+    dialogBoxText.innerHTML = `
+    <p><strong>Cost:</strong> R3000/year</p>
+    <p><strong>Gold Membership Benefits:</strong></p>
+    <ul>
+        <li><strong>All Silver Membership Benefits.</strong></li>
+        <li><strong>VIP Access to Exclusive Networking Events:</strong> Invitation-only events for Gold members, where you can meet influential community leaders and key decision-makers.</li>
+        <li><strong>Customized Advertising Packages:</strong> Gold members receive personalized advertising options, such as homepage banners, newsletter ads, and social media highlights.</li>
+        <li><strong>Free Entry to Major Events:</strong> Complimentary tickets to top-tier Chamber events, including conferences, galas, and awards ceremonies.</li>
+        <li><strong>Sponsorship Opportunities:</strong> Priority consideration for sponsorships at Chamber events, providing increased visibility for your business.</li>
+        <li><strong>Priority Speaking Opportunities:</strong> Gold members are given first choice for speaking roles at Chamber-hosted events and workshops.</li>
+        <li><strong>Custom Business Promotion Plan:</strong> Work with the Chamber’s marketing team to create a tailored plan for promoting your business through various Chamber platforms.</li>
+        <li><strong>Chamber Leadership Invitation:</strong> Opportunity to serve on advisory boards or committees, allowing you to influence the direction of the Chamber and local economic development.</li>
+    </ul>`
+    ;
 });
 
 // Update current year and last modified date
