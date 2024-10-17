@@ -5,6 +5,10 @@
     --background-color: #2a0659; /* A slightly lighter purple */
     --extra-color: #6a1a9e; /* A more readable purple */
     --blue-color: #5651a6; /* Darker blue */
+    --dark-grey:  #333;
+    --dark-blue:  #0b046e;
+    --green-color: green;
+    --back-color:  rgb(217, 215, 212);
 }
 
 
@@ -194,7 +198,7 @@ body {
 }
 
 body.dark-mode {
-    background-color: #333; /* Dark gray for dark mode */
+    background-color: var(--dark-grey); /* Dark gray for dark mode */
 }
 
 /* Main content styling */
@@ -337,7 +341,7 @@ section a:hover {
 
 
 .event-box {
-    background-color: rgba(0, 0, 139, 0.7); /* Darker blue */
+    background-color: var(--dark-blue); /* Darker blue */
     border: 1px solid var(--label-color);
     padding: 30px;
     margin: 20px;
@@ -403,6 +407,178 @@ section a:hover {
     padding: 10px;
     color: var(--label-color);
   }
+
+
+  .memberships{
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+  }
+  .openButton1a ,
+  .openButton2b,
+   .openButton3c,
+   .openButton4d {
+    background-color: var(--background-color);
+    padding: 20px;
+    color: var(--label-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Positioned below */
+    animation: fadeInUp 1s forwards; /* Apply the animation */
+  }
+
+
+.memberships h2{
+    padding: 20px;
+}
+
+::backdrop{
+    background-color: var(--background-small);
+    font-family: "Jost";
+    text-align: center;
+    
+}
+
+#dialogBox{
+    background-color: var(--dark-blue);
+    color:var(--label-color) ;
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+
+#closeButton{
+    background-color: var(--label-color);
+    align-items: center;
+    width: 100px;
+    padding: 5px;
+    border-radius: 8px;
+    color: var(--dark-color);
+    
+}
+
+/* Keyframes to animate the block's appearance and movement */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delays for each block to make them come out one after the other */
+.openButton1a {
+    animation-delay: 0.20s;
+}
+
+.openButton2b {
+    animation-delay: 0.40s;
+}
+
+.openButton3c {
+    animation-delay: 0.60s;
+}
+
+.openButton4d{
+    animation-delay: 0.80s;
+}
+
+form {
+    margin: 1rem 2%;
+  
+    label {
+      display: block;
+      font-size: .8rem;
+      color: var(--dark-color);
+      padding-top: .2rem;
+    }
+    .apointment-form h1 {
+      font-size: .9rem;
+      color: var(--dark-color);
+      margin: 1.5rem 0 .2rem 0;
+      border-bottom: 1px solid var(--dark-grey);
+    }
+  
+    input[type=text],
+    input[type=tel],
+    input[type=date],
+    input[type=email],
+    select {
+      display: block;
+      margin: .1rem 0 1rem 0 ;
+      padding: .3rem;
+      border: 1px solid var(--background-small);
+      border-radius: 4px;
+      border-left-width: 5px;
+      border-left-color: var(--dark-grey);
+      font-size: 1rem;
+      color: var(--dark-color);
+      width: 250px;
+    }
+  
+    input:required {border-left-color: var(--extra-color);}
+    input:focus {border-left-color: var(--dark-color); outline:none;}
+    input:required:valid{border-left-color: var(--green-color);}
+  
+    input[type=submit] {
+      border: none;
+      text-align: center;
+      background-color: var(--dark-blue);
+      color: var(--label-color);
+      border-radius: 1rem;
+      padding: .75rem 1.5rem;
+      margin: 2rem 0;
+      font-size: 1.2rem;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+  }
+  input:-webkit-autofill{
+    -webkit-text-fill-color: var(--dark-grey);
+  }
+  
+  
+    #results {
+        background-color: var(--background-color);
+        color: var(--label-color);
+        padding: 0 1rem;
+        border: 1px solid var(--label-color);
+        border-radius: 6px;
+        padding: .75rem 1.5rem;
+
+}
+
+#results p {
+    line-height: 40px; 
+}
+
+
+      
+
+  /* Container to hold both sections side by side */
+  #coners{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates two equal-width columns */
+     gap: 20px; /* Adds space between the sections */
+     padding: 20px;
+  }
+  
+  /* Optional styling for individual sections */
+  .forms ,.memberships{
+    background-color: var(--back-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 8px 10px rgba(218, 195, 195, 0.1);
+    
+  }
+  
 /* Footer styling */
 footer {
     color: var(--label-color); /* Text color */
@@ -452,7 +628,7 @@ footer {
      .main-container,
       .events,
        .event-box,
-       .mains{
+       .mains {
         display: grid;
         grid-template-columns: 1fr; /* Single column layout */
         margin: 0;
@@ -467,5 +643,12 @@ footer {
     #spotlight h2{
         text-align: left;
     }
-    }
 
+
+  #coners{
+    display: grid;
+     gap: 20px; 
+     padding: 20px;
+     grid-template-columns: 1fr;
+    }
+}
