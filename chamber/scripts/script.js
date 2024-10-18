@@ -1,3 +1,8 @@
+// Update current year and last modified date
+const date = new Date();
+document.getElementById("currentyear").textContent = date.getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.querySelector(".fa-circle-half-stroke"); // Theme toggle button
@@ -237,7 +242,4 @@ closeButton.addEventListener("click",() => {
     dialogBox.close();
 });
 
-// Update current year and last modified date
-const date = new Date();
-document.getElementById("currentyear").textContent = date.getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+
