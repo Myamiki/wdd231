@@ -1,28 +1,34 @@
-const currentUrl = window.location.href;
 
+// JavaScript to display the form results
+const currentUrl = window.location.href;
 const everything = currentUrl.split('?');
 
+if (everything.length > 1) {
+    let formData = everything[1].split('&');
 
-let formData = everything[1].split('&');
+    // Function to extract query parameter value
+    function show(cup) {
+        let result = ''; 
+        formData.forEach((element) => {
+            if (element.startsWith(cup)) {
+                result = decodeURIComponent(element.split('=')[1]); 
+            }
+        });
+        return result;
+    }
 
-function show(cup) {
-    
-    
-    formData.forEach((element) => {
+    // Extract the phone number and clean it
+    let phoneNumber = show('phone');
+    phoneNumber = phoneNumber.replace(/[^\d]/g, ''); // Remove non-numeric characters
 
-        
-        if (element.startsWith(cup)) {
-            result = element.split('=')[1].replace("%40","@"); // Extract the value after '='
-        }
-    })
-    return (result) // Return the extracted value
+    // Display the form data
+    const showInfo = document.querySelector('#results');
+    showInfo.innerHTML = `
+        <p>Appointment for: ${show("first")} ${show("last")}</p>
+        <p>Membership Level: ${show('membership')}</p>
+        <p>Date: ${show('fecha')}</p>
+        <p>Location: ${show('location')}</p>
+        <p>Phone: ${phoneNumber}</p>
+        <p>Email: ${show('email')}</p>
+    `;
 }
-
-const showInfo = document.querySelector('#results');
-showInfo.innerHTML = `
-<p> Appointment for: ${show("first")} ${show("last")} </p>
-<p> Membership Level : ${show('membership')} </p>
-<p> Date: ${show('fecha')} </p>
-<p> Location: ${show('location')}</p>
-<p> Phone: ${show('phone')} </p>
-<p> Email: ${show('email')} </p>`;
