@@ -232,6 +232,12 @@ openButton4.addEventListener("click", () => {
     ;
 });
 
+//close button closes the dialog
+
+closeButton.addEventListener("click",() => {
+    dialogBox.close();
+});
+
 // Update current year and last modified date
 const date = new Date();
 document.getElementById("currentyear").textContent = date.getFullYear();
