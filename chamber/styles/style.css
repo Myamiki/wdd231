@@ -539,7 +539,7 @@ form {
       -webkit-appearance: none;
       appearance: none;
     }
-  }
+  
   input:-webkit-autofill{
     -webkit-text-fill-color: var(--dark-grey);
   }
