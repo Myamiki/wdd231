@@ -1,6 +1,5 @@
 const currentUrl = window.location.href;
 
-
 const everything = currentUrl.split('?');
 
 
