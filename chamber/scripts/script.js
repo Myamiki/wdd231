@@ -233,7 +233,6 @@ openButton4.addEventListener("click", () => {
 });
 
 //close button closes the dialog
-
 closeButton.addEventListener("click",() => {
     dialogBox.close();
 });
