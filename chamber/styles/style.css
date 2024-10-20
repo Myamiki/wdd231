@@ -552,7 +552,6 @@ form {
       font-size: 1.2rem;
       -webkit-appearance: none;
       appearance: none;
-    }
   }
   input:-webkit-autofill{
     -webkit-text-fill-color: var(--dark-grey);
