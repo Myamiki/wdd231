@@ -125,14 +125,19 @@ header {
     transition: background-color 0.3s; /* Smooth background color transition */
 }
 
-.menus{
-     background-color: var(--back-color);
+  #grid, #list{
+    padding: 15px;
+  }
+  
+  .menus{
+    gap: 20px;
+    background-color: var(--back-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40vh;
     margin: 0;
-}
+  }
 
 /* Button hover effect */
 .menus button:hover {
