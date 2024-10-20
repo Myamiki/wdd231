@@ -4,7 +4,6 @@ const date = new Date();
 document.getElementById("currentyear").textContent = date.getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.querySelector(".fa-circle-half-stroke"); // Theme toggle button
     const hamburger = document.getElementById('hamburger'); // Hamburger menu button
