@@ -113,7 +113,6 @@ function displayResults(data) {
     myGraphic.setAttribute('SRC',iconsrc)
     myGraphic.setAttribute('alt',data.weather[0].description)
 }
-
 apiFetch();
 
 document.addEventListener('DOMContentLoaded', () => {
