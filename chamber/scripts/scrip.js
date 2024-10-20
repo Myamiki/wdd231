@@ -1,7 +1,3 @@
-// Update current year and last modified date
-const date = new Date();
-document.getElementById("currentyear").textContent = date.getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
 
 // JavaScript to display the form results
 const currentUrl = window.location.href;
