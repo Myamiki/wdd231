@@ -506,8 +506,9 @@ section a:hover {
 
 form {
     margin: 1rem 2%;
+}
   
-    label {
+   label {
       display: block;
       font-size: .8rem;
       color: var(--dark-color);
@@ -553,7 +554,7 @@ form {
       -webkit-appearance: none;
       appearance: none;
     }
-  }
+  
   input:-webkit-autofill{
     -webkit-text-fill-color: var(--dark-grey);
   }
