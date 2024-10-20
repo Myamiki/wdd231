@@ -126,7 +126,12 @@ header {
 }
 
 .menus{
-    padding: 20px;
+     background-color: var(--back-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    margin: 0;
 }
 
 /* Button hover effect */
@@ -725,7 +730,6 @@ form {
   }
   
 .bodys {
-    font-family: Arial, sans-serif;
     background-color: var(--back-color);
     display: flex;
     justify-content: center;
