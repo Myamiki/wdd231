@@ -1,10 +1,9 @@
-
 [
   {
       "name": "Olbor Tech",
       "membership": "Gold",
       "description": "Leading provider of innovative tech solutions.",
-      "image": "images/members.jpg"
+      "image": "images/members.jpg",
       "EMAIL": "help@companye.com",
       "PHONE": "333-678-1234",
       "URL": "https://www.companye.com"
@@ -13,37 +12,36 @@
       "name": "Zezea Corp",
       "membership": "Silver",
       "description": "Focused on sustainable development and eco-friendly products.",
-      "image":"images/member.jpg"
-       "EMAIL": "help@companye.com",
-       "PHONE": "333-678-1234",
-       "URL": "https://www.companye.com"
+      "image": "images/member.jpg",
+      "EMAIL": "help@companye.com",
+      "PHONE": "333-678-1234",
+      "URL": "https://www.companye.com"
   },
   {
       "name": "Ponif Innovations",
       "membership": "Gold",
       "description": "Specialized in AI-driven applications for modern industries.",
-      "image": "images/memberss.jpg"
+      "image": "images/memberss.jpg",
       "EMAIL": "help@companye.com",
-        "PHONE": "333-678-1234",
-        "URL": "https://www.companye.com"
+      "PHONE": "333-678-1234",
+      "URL": "https://www.companye.com"
   },
   {
       "name": "Jomfy Solutions",
       "membership": "Bronze",
       "description": "Providing next-generation cybersecurity tools.",
-      "image": "images/member.jpg"
-        "EMAIL": "help@companye.com",
-        "PHONE": "333-678-1234",
-        "URL": "https://www.companye.com"
+      "image": "images/member.jpg",
+      "EMAIL": "help@companye.com",
+      "PHONE": "333-678-1234",
+      "URL": "https://www.companye.com"
   },
   {
       "name": "Rujol Enterprises",
       "membership": "Silver",
       "description": "Offering comprehensive cloud services worldwide.",
-      "image": "images/members.jpg"
-       "EMAIL": "help@companye.com",
-       "PHONE": "333-678-1234",
-       "URL": "https://www.companye.com"
+      "image": "images/members.jpg",
+      "EMAIL": "help@companye.com",
+      "PHONE": "333-678-1234",
+      "URL": "https://www.companye.com"
   }
-]  
-
+]
