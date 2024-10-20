@@ -5,8 +5,8 @@
       "description": "Leading provider of innovative tech solutions.",
       "image": "images/members.jpg",
       "EMAIL": "help@companye.com",
-      "PHONE": "333-678-1234",
-      "URL": "https://www.companye.com"
+      "PHONE": "021-675-1200",
+      "URL": "https://www.olbortech.com"
   },
   {
       "name": "Zezea Corp",
@@ -14,8 +14,8 @@
       "description": "Focused on sustainable development and eco-friendly products.",
       "image": "images/member.jpg",
       "EMAIL": "help@companye.com",
-      "PHONE": "333-678-1234",
-      "URL": "https://www.companye.com"
+      "PHONE": "021-677-1267",
+      "URL": "https://www.zezeacorp.com"
   },
   {
       "name": "Ponif Innovations",
@@ -23,25 +23,25 @@
       "description": "Specialized in AI-driven applications for modern industries.",
       "image": "images/memberss.jpg",
       "EMAIL": "help@companye.com",
-      "PHONE": "333-678-1234",
-      "URL": "https://www.companye.com"
+      "PHONE": "021-679-1289",
+      "URL": "https://www.ponifinnovations.com"
   },
   {
       "name": "Jomfy Solutions",
       "membership": "Bronze",
       "description": "Providing next-generation cybersecurity tools.",
-      "image": "images/member.jpg",
+      "image": "images/membersy.jpg",
       "EMAIL": "help@companye.com",
-      "PHONE": "333-678-1234",
-      "URL": "https://www.companye.com"
+      "PHONE": "021-678-1234",
+      "URL": "https://www.jomfysolution.com"
   },
   {
       "name": "Rujol Enterprises",
       "membership": "Silver",
       "description": "Offering comprehensive cloud services worldwide.",
-      "image": "images/members.jpg",
+      "image": "images/memberw.jpg",
       "EMAIL": "help@companye.com",
-      "PHONE": "333-678-1234",
-      "URL": "https://www.companye.com"
+      "PHONE": "021-670-1212",
+      "URL": "https://www.rujolenterprises.com"
   }
 ]
