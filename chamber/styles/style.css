@@ -734,7 +734,7 @@ form {
     cursor: pointer;
     text-decoration: underline;
   }
-  
+
 .bodys {
     background-color: var(--back-color);
     display: flex;
