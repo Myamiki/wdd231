@@ -235,7 +235,6 @@ openButton4.addEventListener("click", () => {
     </ul>`
     ;
 });
-
 //close button closes the dialog
 closeButton.addEventListener("click",() => {
     dialogBox.close();
