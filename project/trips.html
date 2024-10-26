@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD231 - Wanderlust Travel Adventures Project">
+        <meta name="author" content="Prayer Marangwanda">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="WDD231 - Wanderlust Travel Adventures Project"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://www.pexels.com/photo/blue-dome-tent-near-mountain-618848"/>
+        <meta property="og:url" content="https://myamiki.github.io/wdd231/project/blog-post.html"/>
+        <meta property="og:description" content="Book a Trip with Wanderlust Travel Adventures where you can explore unique destinations and unforgettable experiences."/>
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Wanderlust Travel Adventures Project"/>
+        <meta name="twitter:description" content="Book a Trip with Wanderlust Travel Adventures where you can explore unique destinations and unforgettable experiences."/>
+        <meta name="twitter:image" content="https://www.pexels.com/photo/blue-dome-tent-near-mountain-618848"/>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/example.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="icon" href="images/search.png" type="image/png" alt="Site Icon">
+        <!-- JavaScript -->
+        <script defer src="scripts/scrp.js"></script>
+        <title>Welcome to Wanderlust Travel Adventures</title>
+    </head>
+<body>
+    <header>
+        <nav id="navbar" class="navbar">
+        <img src="images/logo.jpg" alt="Travel Blog Logo" class="logo" loading="lazy"> 
+        <a href="index.html">Home</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+    </nav>
+        <div class="header-content">
+            <h1>Welcome to Wanderlust Travel</h1>
+            <div class="line"></div>
+            <h2>Explore the World</h2>
+            <a href="contact.html" class="ctn">Book Now</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="titles">
+            <h2>Upcoming Event</h2>
+            <div class="line"></div>
+
+            <div class="row">
+                <div class="coloum">
+                    <img src="images/pic9.jpg" alt="beach" loading="lazy">
+                    <h3>Hawaiian Beach</h3>
+                <p>Experience the most serene beaches on the Hawaiian islands, with crystal clear waters and breathtaking sunsets.</p>
+                <p><strong>Price:</strong> $2000</p>
+                    <p><strong>Days:</strong> 5 days</p>
+                <button class="see-more" data-info="hawai">See More</button>
+                <p id="hawai-info" class="more-info">Hawaiian beaches offer some of the best surfing, snorkeling, and whale watching.
+                     With luxurious resorts and local seafood, it's a traveler's paradise.</p>
+                </div>
+                <div class="coloum">
+                    <img src="images/pic1.jpg" alt="mountain" loading="lazy">
+                    <h3>Mount Everest</h3>
+                <p>Climb to the roof of the world and experience the most iconic mountain in the Himalayas.</p>
+                <p><strong>Price:</strong> $3000</p>
+                    <p><strong>Days:</strong> 10 days</p>
+                <button class="see-more" data-info="everest">See More</button>
+                <p id="everest-info" class="more-info">Mount Everest is not just for climbers—enjoy trekking in the lower regions,
+                     explore Sherpa villages, and take in the stunning panoramic views.</p>
+                </div>
+                <div class="coloum">
+                    <img src="images/pic5.jpg" alt="skydiving" loading="lazy">
+                    <h3>Dubai Sky Diving</h3>
+                <p>Take the ultimate leap and enjoy skydiving over the breathtaking Palm Jumeirah in Dubai.</p>
+                <p><strong>Price:</strong> $1500</p>
+                <p><strong>Days:</strong> 7 days</p>
+                <button class="see-more" data-info="dubai">See More</button>
+                <p id="dubai-info" class="more-info">Dubai offers unparalleled skydiving experiences
+                     with stunning views of the iconic Palm Jumeirah, luxurious hotels, and world-class shopping districts.</p>
+            </div>
+        </section>
+
+  
+<!-- Comment Section -->
+<section class="comment-section">
+    <h2>Customer Feedback</h2>
+    <div class="comments-container">
+        <!-- Existing comments -->
+        <div class="comment" id="comment1">
+            <p><strong>Jane Doe:</strong> Climbing Mount Everest has been a lifelong dream...</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+        </div>
+        <div class="comment" id="comment2">
+            <p><strong>John Smith:</strong> Skydiving in Dubai was the most thrilling...</p>
+            <p>Rating: ⭐⭐⭐⭐</p>
+        </div>
+        <div class="comment" id="comment3">
+            <p><strong>Emily Johnson:</strong> My trip to the Hawaiian beaches was unforgettable...</p>
+            <p>Rating: ⭐⭐⭐⭐⭐</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Comment Form Section -->
+    <section class="comment-form-section">
+        <h2>Leave a Comment</h2>
+        <form id="comment-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="comment">Your Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                <option value="⭐⭐⭐">⭐⭐⭐</option>
+                <option value="⭐⭐">⭐⭐</option>
+                <option value="⭐">⭐</option>
+            </select><br><br>
+    
+            <button type="submit">Submit Comment</button>
+        </form>
+    </section>
+<section class="questions">
+    <h2>Most asked questions</h2>
+    <br>
+    <br>
+    <ul class="faq">
+      <li>
+        <button class="faq-question">How can I plan a budget-friendly vacation? <span class="toggle-icon">+</span></button>
+        <div class="faq-answer">You can plan a budget-friendly vacation by setting a budget, booking early, and finding deals on accommodation and flights.</div>
+      </li>
+      <li>
+        <button class="faq-question">How do I find affordable flights? <span class="toggle-icon">+</span></button>
+        <div class="faq-answer">Look for deals on comparison websites, book during off-peak times, and consider flexible travel dates to find affordable flights.</div>
+      </li>
+      <li>
+        <button class="faq-question">What are the best travel apps to use? <span class="toggle-icon">+</span></button>
+        <div class="faq-answer">Some of the best travel apps are Google Maps, Skyscanner, Airbnb, and TripAdvisor for easy planning and navigation.</div>
+      </li>
+      <li>
+        <button class="faq-question">How can I stay safe while traveling alone? <span class="toggle-icon">+</span></button>
+        <div class="faq-answer">Stay safe by sharing your itinerary with friends, being aware of your surroundings, and avoiding unsafe areas.</div>
+      </li>
+      <li>
+        <button class="faq-question">What should I know before visiting a new country? <span class="toggle-icon">+</span></button>
+        <div class="faq-answer">Before visiting a new country, research the culture, local laws, and customs. Learn some basic phrases in the local language and understand the currency.</div>
+      </li>
+    </ul>
+    </section>
+    </main>
+    <footer>
+        <div class="footers">
+            <p class="copyright"> @<span id="currentyear"></span>💕 Prayer Marangwanda💕 South Africa <img src="images/flag2.jpg" alt="South Africa" width="20" loading="lazy"> </p>
+           <p class="lastModified">Last Modification:  <span id="lastModified"></span></p>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.png" alt="Facebook" loading="lazy">
+                </a>
+                <a href="http://twitter.com">
+                    <img src="images/twitter.png" alt="Twitter" loading="lazy">
+                </a>
+                <a href="http://instagram.com">
+                    <img src="images/instagram.png" alt="Instagram" loading="lazy">
+                </a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD231 - Wanderlust Travel Adventures Project">
+        <meta name="author" content="Prayer Marangwanda">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="WDD231 - Wanderlust Travel Adventures Project"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://www.pexels.com/photo/blue-dome-tent-near-mountain-618848"/>
+        <meta property="og:url" content="https://myamiki.github.io/wdd231/project/contact.html"/>
+        <meta property="og:description" content="Book a Trip with Wanderlust Travel Adventures where you can explore unique destinations and unforgettable experiences."/>
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Wanderlust Travel Adventures Project"/>
+        <meta name="twitter:description" content="Book a Trip with Wanderlust Travel Adventures where you can explore unique destinations and unforgettable experiences."/>
+        <meta name="twitter:image" content="https://www.pexels.com/photo/blue-dome-tent-near-mountain-618848"/>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/example.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="icon" href="images/search.png" type="image/png" alt="Site Icon">
+        <!-- JavaScript -->
+        <script defer src="scripts/scrp.js"></script>
+        <script defer src="scripts/script.js"></script>
+        <script defer src="scripts/booking.js"></script>
+        <title> Get in Touch with Wanderlust Travel Adventures</title>
+    </head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="navbar" class="navbar">
+        <img src="images/logo.jpg" alt="Travel Blog Logo" class="logo"> 
+        <a href="index.html">Home</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+    </nav>
+        <div class="header-content">
+            <h1> Get in Touch with <br> Wanderlust Travel Adventures</h1>
+            <div class="line"></div>
+            <h2>Explore the World</h2>
+            <a href="#" class="ctn">Book Now</a>
+        </div>
+       
+    </header>
+    <main>
+        <section class="book-form">
+          <form id="bookNowForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+            <label for="date">Booking Date</label>
+            <input type="date" id="date" name="date" required>
+        
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" name="time" required>
+        
+            <label for="services">Select destination of choice</label>
+            <select id="services" name="services" required>
+              <option value="">Select</option>
+              <option value="Hawaiian-Beach">Hawaiian Beach</option>
+              <option value="Mount-Everest">Mount Everest</option>
+              <option value="Dubai-Sky-Diving">Dubai Sky Diving</option>
+        
+        
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" placeholder="Write any additional notes here..." rows="4"></textarea>
+        
+            <input type="submit" value="Book Now">
+            <p class="error" id="errorMessage">Please fill in all required fields correctly.</p>
+            <p class="success" id="successMessage">Your booking was successful!</p>
+        </form>
+       </section>
+       
+<section class="virtues">
+    <h2>Our Values</h2>
+    <div class="virtues-list">
+        <div class="virtue">
+            <h3>Exploration</h3>
+            <p>We believe in discovering new places and creating unique travel experiences.</p>
+        </div>
+        <div class="virtue">
+            <h3>Sustainability</h3>
+            <p>We are committed to eco-friendly travel and preserving the natural beauty of our planet.</p>
+        </div>
+        <div class="virtue">
+            <h3>Community</h3>
+            <p>We foster connections between travelers and local communities to enrich both.</p>
+        </div>
+        <div class="virtue">
+            <h3>Safety</h3>
+            <p>Your safety is our top priority, ensuring worry-free adventures wherever you go.</p>
+        </div>
+    </div>
+</section>
+
+        <section class="map">
+            <h2>Company information</h2>
+            <p>Address: 144 River Rd, Vanderbijlpark, 1911</p>
+            <p>Phone: (021) 454-7878</p>
+            <p>Email: whitewater@raftingco.com</p>
+            <br>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3562.8768667739805!2d27.81497507443156!3d-26.748305186352635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e945a4000000001%3A0x512eb420d4794784!2sVaal%20River%20Resort!5e0!3m2!1sen!2sza!4v1729602112826!5m2!1sen!2sza"
+           class="map-embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </section>
+
+  
+<section class="team">
+    <h2>Meet the Team</h2>
+    <div class="employee">
+        <img src="images/memberss.jpg" alt="Operations Manager" loading="lazy">
+        <h3>Operations Manager</h3>
+        <p>Ensuring seamless travel experiences from start to finish.</p>
+    </div>
+    <div class="employee">
+        <img src="images/members.jpg" alt="Lead Guide" loading="lazy">
+        <h3>Lead Guide</h3>
+        <p>Your adventure expert, guiding you through the best destinations.</p>
+    </div>
+    <div class="employee">
+        <img src="images/memberw.jpg" alt="Customer Support" loading="lazy">
+        <h3>Customer Support</h3>
+        <p>Here to answer any questions and make your journey smooth.</p>
+    </div>
+</section>
+
+<section class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="submit_contact.php" method="POST">
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        <textarea id="message" name="message" placeholder="Your Message"></textarea>
+        <button type="button" id="submit-btn">Submit</button>
+        
+    </form>
+</section>
+    </main>
+    <footer>
+        <div class="footers">
+            <p class="copyright"> @<span id="currentyear"></span>💕 Prayer Marangwanda💕 South Africa <img src="images/flag2.jpg" alt="South Africa" width="20" loading="lazy"> </p>
+            <p class="lastModified">Last Modification:  <span id="lastModified"></span></p>
+            <nav class="sociallinks">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.png" alt="Facebook" loading="lazy">
+                </a>
+                <a href="http://twitter.com">
+                    <img src="images/twitter.png" alt="Twitter" loading="lazy">
+                </a>
+                <a href="http://instagram.com">
+                    <img src="images/instagram.png" alt="Instagram" loading="lazy">
+                </a>
+            </nav>
+        </div>
+
+    </footer> 
+</body>
+</html>
