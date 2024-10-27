@@ -1,19 +1,14 @@
 :root{
 --primary-color: #fc036b; /* Main accent color */
 --secondary-color: #160ccd; /* Secondary color for highlights */
-/* Background Colors */
 --background-light: #f4f4f4; /* Light section background */
 --background-dark: black; /* Dark overlay */
 --col-background: lightblue; /* Column background */
-/* Text Colors */
 --extra-text-color: #555;
 --text-dark: #333; /* Dark text */
-/* Accent and Border Colors */
 --border-color: #ccc; /* Standard border color */
 --success-color: green; /* Success message color */
 --error-color: red; /* Error message color */
-
-/* Button Colors */
 --button-hover: #0056b3; /* Button hover color */
 }
 * {
